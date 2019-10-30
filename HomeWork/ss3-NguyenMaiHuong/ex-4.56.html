@@ -12,13 +12,26 @@
     <script>
         var flock = [5, 7, 300, 90, 24, 50, 75];
         console.log(`Hello, my name is Huong and here is my flock \n ${flock}`);
+        // var loop = true;
+        // while (loop){
+            for (let i=0; i<3; i++){
         for (let i = 0; i < flock.length; i++) {
-            for (let i = 0; i < flock.length; i++) {
-                flock[i] = flock[i] + 50;
+            flock[i] += 50;
             }
             console.log(`One month has passed, now here is my flock \n ${flock}`);
-            console.log(`Now my biggest sheep has size ${Math.max(...flock)}`);
+            var biggestSheep = Math.max(...flock);
+            console.log(`Now my biggest sheep has size ${biggestSheep} let's shear it`);
+            var indx_biggestSheep = flock.indexOf(biggestSheep);
+            flock[indx_biggestSheep] = 8;
+            console.log(`After shearing, here is my flock \n ${flock}`);
         }
+        // Ex 4.6
+        var plus = 0;
+        for(let i=0; i < flock.length; i++){
+            plus += flock[i]
+        }
+        console.log(plus);
+
     </script>
 </body>
 
