@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ex 4.1
+        var flock = [5, 7, 300, 90, 24, 50, 75];
+        console.log(`Hello, my name is Huong anh these are my ship sizes: ${flock}`);
+        // Ex 4.2
+        var biggestSheep = flock[0];
+        for(let i=0; i<flock.length; i++){
+            if (biggestSheep < flock[i]){
+                biggestSheep = flock[i]
+            }
+        }
+        console.log(`Now, my biggest sheep has size ${biggestSheep} let's shear it`); 
+        // Ex 4.3
+        var indx_biggestSheep = flock.indexOf(biggestSheep);
+        flock.splice(indx_biggestSheep,1);
+        console.log(`After shearing, here is my flock ${flock}`);
+        // Ex 4.4
+        for (let i=0; i< flock.length; i++){
+            flock[i]=flock[i]+50;
+        }
+        console.log(`One month has passed, now here is my flock ${flock}`);
+        
+
+
+    </script>
+</body>
+
+</html>

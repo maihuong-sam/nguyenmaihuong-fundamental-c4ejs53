@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var flock = [5, 7, 300, 90, 24, 50, 75];
+        console.log(`Hello, my name is Huong and here is my flock \n ${flock}`);
+        for (let i = 0; i < flock.length; i++) {
+            for (let i = 0; i < flock.length; i++) {
+                flock[i] = flock[i] + 50;
+            }
+            console.log(`One month has passed, now here is my flock \n ${flock}`);
+            console.log(`Now my biggest sheep has size ${Math.max(...flock)}`);
+        }
+    </script>
+</body>
+
+</html>

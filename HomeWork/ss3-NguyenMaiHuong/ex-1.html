@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var items = ["T-Shirt", "Sweater"];
+        var loop = true;
+        while (loop) {
+            var _userInput = prompt("Welcome to our shop, what do you want: C/R/U/D ?");
+            var userInput = _userInput.toLowerCase();
+            if (userInput == "r") {
+                items.forEach((item, index) => {
+                    console.log(`${index+1}. ${item}`)
+                })
+            } else if (userInput == "c") {
+                var userCreate = prompt("Enter new item:");
+                items.push(userCreate);
+                items.forEach((item, index) => {
+                    console.log(`${index+1}. ${item}`)
+                })
+            } else if (userInput == "u") {
+                var userUpdate = prompt("Update position or item: V/I ?").toLowerCase();
+                if (userUpdate == "i") {
+                    var userInputIndex = Number(prompt("Update position?", ''));
+                    if (userInputIndex < 0 || userInputIndex > items.length) {
+                        alert("Error");
+                    } else {
+                        let userUpdateContent = prompt("Enter item:");
+                        items[userInputIndex] = userUpdateContent;
+                        items.forEach((item, index) => {
+                            console.log(`${index+1}. ${item}`);
+                        })
+                    }
+                }
+                if (userUpdate == "v") {
+                    var userSelectContent = prompt("Select item:");
+                    if (userSelectContent == items.value) {
+                        var ind = items.indexOf(userSelectContent);
+                        var userInputContent = prompt("New item:");
+                        items[ind] = userInputContent;
+                        items.forEach((item, index) => {
+                            console.log(`${index+1}. ${item}`);
+                        })
+                    } else {
+                        alert("Not found!");
+                    }
+                } else if (userInput == "d") {
+                    var userInputDeleteIndex = Number(prompt("Delete position:"));
+                    items.splice(userInputDeleteIndex, 1);
+                    items.forEach((item, index) => {
+                        console.log(`${index+1}. ${item}`);
+                    })
+                } else {
+                    alert("Reselect, please!");
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
