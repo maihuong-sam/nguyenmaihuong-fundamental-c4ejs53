@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var dictionary = {
+            debug: "The process of figuring out why your program has a certain error and how to fix it.",
+            done: "When your task is complete, the only thing you have to do is to wait for users to use it(no additional codes or actions needed).",
+            defect: "The formal word for 'error'",
+            pm: "The short version of Project Manager, the person in charge of the final result of a project",
+            ui_ux: "UI means User Interface, UX mean User Experience, are the process to define how your products looks and feels"
+        };
+        alert("Hi there, this is dev dictionary.");
+        var arrPrototype = Object.keys(dictionary); //// array keys
+        var userInput = prompt("Enter a keyword:").toLowerCase();
+        var loop = true;
+        while (loop) {
+            if (userInput in dictionary) {
+                alert(dictionary[userInput]);
+                // loop=false;
+                console.log(dictionary[userInput]);
+            } else {
+                var userCreateContent = prompt(`We could not find your word: ${userInput}, leave your explanation:`).toLowerCase();
+                if (userCreateContent == String){
+                dictionary[userInput] = userCreateContent;
+                alert("Done");
+                } else {
+                    userCreateContent= prompt("Leave your explanation!");
+                    dictionary[userInput] = userCreateContent;
+                    alert("Done");
+                }
+            }
+            userInput = prompt("Enter a keyword:").toLowerCase();
+        }
+    </script>
+</body>
+
+</html>

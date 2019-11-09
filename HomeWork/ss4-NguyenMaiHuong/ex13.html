@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var tasks = [{
+                title: "HTML",
+                completed: false
+            },
+            {
+                title: "CSS",
+                Complete: "false"
+            },
+            {
+                title: "Basics of JavaScript",
+                Complete: "false"
+            },
+            {
+                title: "Node Package Manager (npm)",
+                Complete: "false"
+            },
+            {
+                title: "Git",
+                Complete: "false"
+            }
+        ];
+        
+        console.log("Hi there, this is your learning tasks to front-end developer career:");
+
+        // 13.1
+
+        // var title = Object.keys(tasks[0]);
+        // for (let i = 0; i < title.length; i++) {
+        //     var arrTitleKey = Object.keys(tasks[0][title[i]]);
+        //     var arrTitleValue = Object.values(tasks[0][title[i]]);
+        //     console.log(`${i+1}. ${title[i]}`);
+        //     console.log(`${arrTitleKey} : ${arrTitleValue}`)
+        // }
+
+
+        // 13.2
+        var userInput = prompt("Enter your command (New, Delete, Update, Complete) N/D/U/C").toLowerCase();
+        var ObjNew = Object.assign(tasks[0], obj);
+        var title = Object.keys(tasks[0]);
+        if (userInput === "n") {
+            var tasksAddContent = prompt("Enter new task:");
+            var obj = {}
+            obj[tasksAddContent] = {
+                Complete: "false"
+            };
+
+        } else if (userInput === "u") {
+            var userInputUpdateIndex = Number(prompt("Enter position:"));
+            var userInputUpdateTitle = prompt("Enter new title:");
+
+            var titleBefore = tasks[userInputUpdateIndex];
+            title[titleBefore] = userInputUpdateTitle;
+
+        } else if (userInput === "c") {
+            var userInputCompleteIndex = prompt("Enter position:");
+        }
+        for (let i = 0; i < title.length; i++) {
+            var arrTitleKey = Object.keys(tasks[0][title[i]]);
+            var arrTitleValue = Object.values(tasks[0][title[i]]);
+            console.log(`${i+1}. ${title[i]}`);
+            console.log(`${arrTitleKey} : ${arrTitleValue}`)
+        }
+    </script>
+</body>
+
+</html>
