@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="table" border="solid">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+        <tr>
+            <td>Row3 cell1</td>
+            <td>Row3 cell2</td>
+        </tr>
+    </table>
+    <br>
+    <input id="input-row" type="text" placeholder="Enter row number">
+    <input id="input-column" type="text" placeholder="Enter column number">
+    <input id="input-content" type="text" placeholder="Enter content number">
+    <button id="btn-submit">Submit</button>
+    <script>
+        var btnSubmit = document.getElementById("btn-submit")
+        var userInputRow = document.getElementById("input-row")
+        var userInputColumn = document.getElementById("input-column")
+        var userInputContent = document.getElementById("input-content")
+        
+        // chưa ra kết quả
+        var table = document.getElementById("table").rows[userInputRow.value].cells;
+        table[userInputColumn.value].innerHTML = userInputContent;
+    </script>
+</body>
+
+</html>

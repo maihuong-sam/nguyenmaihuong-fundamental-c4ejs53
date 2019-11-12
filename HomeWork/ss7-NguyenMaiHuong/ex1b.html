@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="color-list" id="color-list">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+    </select>
+    <button id="btn-remove-item"></button>
+
+    <script>
+    let btnRemoveItem = document.getElementById("btn-remove-item")
+    console.dir(btnRemoveItem)
+    let listSelect = document.getElementById("color-list")
+    console.dir(listSelect)
+    let optionValue = document.getElementsByTagName("option")
+    console.dir(optionValue)
+
+    btnRemoveItem.addEventListener('click', () => {
+        // listSelect.remove(listSelect.innerText)
+        listSelect.remove(listSelect.listSelectIndex)
+        // không xoá được mục chọn, chỉ xoá được theo index
+    })
+    </script>
+</body>
+</html>
