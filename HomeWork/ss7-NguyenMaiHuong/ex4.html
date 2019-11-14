@@ -33,10 +33,14 @@
         var userInputRow = document.getElementById("input-row")
         var userInputColumn = document.getElementById("input-column")
         var userInputContent = document.getElementById("input-content")
-        
+        var table = document.getElementById("table")
+
         // chưa ra kết quả
-        var table = document.getElementById("table").rows[userInputRow.value].cells;
-        table[userInputColumn.value].innerHTML = userInputContent;
+        btnSubmit.addEventListener('click', () => {
+         var  x =  table.rows[Number(userInputRow.value)];
+            // [Number(userInputColumn.value)];
+            x[Number(userInputColumn.value)].value = userInputContent.value;
+        })
     </script>
 </body>
 

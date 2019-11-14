@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="count-down-number">-</button>
+    <span id="number">0</span>
+    <button id="count-up-number">+</button>
+
+    <script>
+    let btnCountUp = document.getElementById("count-up-number")
+    let btnCountDown = document.getElementById("count-down-number")
+    let number = document.getElementById("number")
+console.dir(btnCountUp)
+    number.value = 0
+
+    btnCountUp.addEventListener('click', () => {
+        let x = 1
+        number.value += x
+        number.innerText = number.value
+    })
+
+    btnCountDown.addEventListener('click', () => {
+        let x = 1
+        number.value -= x
+        number.innerText = number.value
+    })
+    </script>
+</body>
+</html>

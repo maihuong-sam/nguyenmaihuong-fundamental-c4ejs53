@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="user-input" type="text" value="5">
+    <button id="btn-start">Start</button>
+    <button id="btn-stop">Stop</button>
+    <span id="value-current"></span>
+    <script>
+        let userInput = document.getElementById("user-input")
+        let btnStart = document.getElementById("btn-start")
+        let btnStop = document.getElementById("btn-stop")
+        let valueCurrent = document.getElementById("value-current")
+        console.dir(userInput)
+        let do_countDown
+        btnStart.addEventListener('click', () => {
+            do_countDown = setInterval(function () {
+                valueCurrent.innerText = userInput.value
+                userInput.value -= 1
+                userInput.innerHTML = userInput.value
+                if (userInput.value === "0") {
+                    clearInterval(do_countDown)
+                    valueCurrent.innerText = "Time's up"
+                }
+            }, 300)
+        })
+        btnStop.addEventListener('click', () => {
+            valueCurrent.innerText = "Stopped"
+            clearInterval(do_countDown)
+        })
+    </script>
+</body>
+
+</html>
