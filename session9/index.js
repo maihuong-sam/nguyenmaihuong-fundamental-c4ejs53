@@ -20,7 +20,7 @@ const renderUser = async () => {
 
         avatar.src = element.avatar
         container.appendChild(avatar)
-        avatar.className = 'img'
+        // avatar.className = 'img'
 
         fullName.innerHTML = `Name: ${element.first_name + element.last_name}`
         container.appendChild(fullName)
@@ -29,6 +29,7 @@ const renderUser = async () => {
         email.innerHTML = element.email
         email.style.display='none'
         container.appendChild(email)
+        container.appendChild(hr)
         // context.appendChild(container)
 
         avatar.addEventListener("mouseover", () => {
