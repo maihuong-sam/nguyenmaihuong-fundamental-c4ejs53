@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 20%;    
 }
 
@@ -25,7 +26,7 @@ button:hover {
 #result {
     text-align: end;
     display: inline-block;
-    
+    padding-right: 1rem;
 }
 
 #result, 
@@ -33,7 +34,6 @@ button:hover {
     width: 100%;
     height: 5rem;
     font-size: 40px;
-    color
 }
 
 .btn-number,
