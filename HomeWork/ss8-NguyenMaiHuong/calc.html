@@ -10,43 +10,40 @@
 </head>
 
 <body>
-    <p id="result">0</p>
-    <p class="user-input"></p>
-    <button class="right-bracket-btn">(</button>
-    <button class="left-bracket-btn">)</button>
-    <button class="btn-delete delete-btn">CE</button>
-    <button class="btn-operator division-btn">÷</button>
+    <div>
+    <p id="result" type="text" placeholder="0" >0</p>
+    <!-- <input id="user_input" type="text" > -->
+    <br>
+    <button class="right-bracket-btn" value="(">(</button>
+    <button class="left-bracket-btn" value=")">)</button>
+    <button class="btn-delete delete-btn" value="CE">CE</button>
+    <button class="btn-operator division-btn" value="÷">÷</button>
 
     <br>
-    <button class="btn-number seven-number-btn">7</button>
-    <button class="btn-number eight-number-btn">8</button>
-    <button class="btn-number nine-number-btn">9</button>
-    <button class="btn-operator multi-btn">x</button>
-
-
-    <br>
-    <button class="btn-number four-number-btn">4</button>
-    <button class="btn-number five-number-btn">5</button>
-    <button class="btn-number six-number-btn">6</button>
-    <button class="btn-operator subtraction-btn">-</button>
-
+    <button class="btn-number seven-number-btn" value="7">7</button>
+    <button class="btn-number eight-number-btn" value="8">8</button>
+    <button class="btn-number nine-number-btn" value="9">9</button>
+    <button class="btn-operator multi-btn" value="x">x</button>
 
     <br>
-    <button class="btn-number one-number-btn">1</button>
-    <button class="btn-number two-number-btn">2</button>
-    <button class="btn-number three-number-btn">3</button>
-    <button class="btn-operator summation-btn">+</button>
+    <button class="btn-number four-number-btn" value="4">4</button>
+    <button class="btn-number five-number-btn" value="5">5</button>
+    <button class="btn-number six-number-btn" value="6">6</button>
+    <button class="btn-operator subtraction-btn" value="-">-</button>
 
     <br>
-    <button class="btn-number zero-number-btn">0</button>
-    <button class="dot-btn">.</button>
-    <button class="btn-number percent-btn">%</button>
-    <button class="result-btn">=</button>
+    <button class="btn-number one-number-btn" value="1">1</button>
+    <button class="btn-number two-number-btn" value="2">2</button>
+    <button class="btn-number three-number-btn" value="3">3</button>
+    <button class="btn-operator summation-btn" value="+">+</button>
 
-    <script src="calc.js">
-
-
-    </script>
+    <br>
+    <button class="btn-number zero-number-btn" value="0">0</button>
+    <button class="dot-btn" value=".">.</button>
+    <button class="btn-number percent-btn" value="%">%</button>
+    <button class="result-btn" value="=">=</button>
+</div>
+    <script src="calc.js"></script>
 </body>
 
 </html>
