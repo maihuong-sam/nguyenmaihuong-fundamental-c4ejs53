@@ -10,23 +10,26 @@
 
 <body>
     <script>
-        var url =
-            'https://reqres.in/api/users?page=2&fbclid=IwAR2tuTVANWsRKCPHRh_KcZlKRh8ksxh1uv75Wg-c_w04NveO9MRP_8jm9cs'
-        var promise = async () => {
-            const fetchPromise = await fetch(url)
-            const json = await Response.json()
-            console.log(JSON.stringify(json))
-
-            var promise = new Promise((resolve, reject) => {
-                    setTimeout(() => resolve(fetchPromise.then(connection => {
-                            console.log('connected')
-                            console.log(connection), 1000)
-                    })
-
-                }
-
-            )
+        const database = {}
+        const getApi = async () => {
+            const fetchPromise = await fetch('https://reqres.in/api/users?page=2&fbclid=IwAR2tuTVANWsRKCPHRh_KcZlKRh8ksxh1uv75Wg-c_w04NveO9MRP_8jm9cs')
+            const db = await fetchPromise.json()
+            console.log(db.data)
+            
+        
         }
+        getApi()
+
+        // var url =
+        //     'https://reqres.in/api/users?page=2&fbclid=IwAR2tuTVANWsRKCPHRh_KcZlKRh8ksxh1uv75Wg-c_w04NveO9MRP_8jm9cs'
+        // var promise = async () => {
+        //     const fetchPromise = await fetch(url)
+        //     const json = await Response.json()
+        //     console.log(JSON.stringify(json))}
+
+            
+            
+        
     </script>
 
 </body>
